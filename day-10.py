@@ -55,6 +55,7 @@ def count_different_arrangements(outlet, adaptors):
     arrangements = 0
     adaptors = list(adaptors)
     adaptors.sort()
+    
 
 if __name__ == "__main__":
     adaptors = read_input('day-10-input.txt')
