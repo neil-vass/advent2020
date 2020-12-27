@@ -71,9 +71,10 @@ def count_differences(outlet, adaptors):
 def can_jump(left, right):
     return 1 <= (right - left) <= 3
 
-
-
 def find_arrangements(outlet_to_device):
+    return find_arrangements_by_lookup_table(outlet_to_device)
+
+def find_arrangements_by_lookup_table(outlet_to_device):
     diffs = [j-i for i, j in zip(outlet_to_device[:-1], outlet_to_device[1:])]
     arrangements = 1
     for k, g in itertools.groupby(diffs):
